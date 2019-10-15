@@ -1,0 +1,12 @@
+﻿  ffmpegPro.cpp
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavutil\rational.h(1,1): warning C4819:  该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+ffmpegPro.obj : error LNK2019: 无法解析的外部符号 _avcodec_configuration，该符号在函数 _main 中被引用
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\lib\avcodec.lib : warning LNK4272: 库计算机类型“x64”与目标计算机类型“x86”冲突
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\lib\avdevice.lib : warning LNK4272: 库计算机类型“x64”与目标计算机类型“x86”冲突
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\lib\avfilter.lib : warning LNK4272: 库计算机类型“x64”与目标计算机类型“x86”冲突
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\lib\avformat.lib : warning LNK4272: 库计算机类型“x64”与目标计算机类型“x86”冲突
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\lib\avutil.lib : warning LNK4272: 库计算机类型“x64”与目标计算机类型“x86”冲突
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\lib\postproc.lib : warning LNK4272: 库计算机类型“x64”与目标计算机类型“x86”冲突
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\lib\swresample.lib : warning LNK4272: 库计算机类型“x64”与目标计算机类型“x86”冲突
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\lib\swscale.lib : warning LNK4272: 库计算机类型“x64”与目标计算机类型“x86”冲突
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\Debug\ffmpegPro.exe : fatal error LNK1120: 1 个无法解析的外部命令
