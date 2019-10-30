@@ -33,7 +33,6 @@ int RTMP_SAVE::openInputEnv(string inputUrl) {
 	}
 	else {
 		LOGI("打开文件成功");
-
 	}
 	return ret;
 }
