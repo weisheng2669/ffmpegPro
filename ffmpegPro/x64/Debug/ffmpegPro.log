@@ -1,20 +1,13 @@
 ﻿  ffmpegPro.cpp
-  pcm_relation.cpp
+  yuvrelation.cpp
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavutil\rational.h(1,1): warning C4819:  该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\pcm_relation.cpp(25,36): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\pcm_relation.cpp(12,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\yuvrelation.cpp(12,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message :  参见“fopen”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\pcm_relation.cpp(13,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\yuvrelation.cpp(13,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message :  参见“fopen”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\pcm_relation.cpp(14,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\yuvrelation.cpp(14,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message :  参见“fopen”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\pcm_relation.cpp(44,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message :  参见“fopen”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\pcm_relation.cpp(45,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message :  参见“fopen”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\pcm_relation.cpp(77,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message :  参见“fopen”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\pcm_relation.cpp(78,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\yuvrelation.cpp(15,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   正在生成代码...
 D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message :  参见“fopen”的声明
   ffmpegPro.vcxproj -> D:\visualstudioworkspace\FFMpegPro\FFMpegPro\x64\Debug\ffmpegPro.exe

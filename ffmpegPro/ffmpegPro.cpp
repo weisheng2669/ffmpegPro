@@ -4,6 +4,7 @@
 #include "rtmp_save_file.h"
 #include "Decoder.h"
 #include "pcm_relation.h"
+#include "yuvrelation.h"
 using namespace std;
 
 /*
@@ -53,13 +54,20 @@ int doWithPCM() {
 
 
 int main()
-{   /*
-	//保存网络流
-	do_RTMP_SAVE();
+{  
+	/*
+	*保存网络流
+	*do_RTMP_SAVE();
 	*/
+
+
 	//doWithPCM();
 	//simplest_pcm16le_split("D:/audioAndvideo/NocturneNo2inEflat_44.1k_s16le.pcm");
 	//simplest_pcm16le_halfvolumeleft("D:/audioAndvideo/NocturneNo2inEflat_44.1k_s16le.pcm");
-	simplest_pcm16le_doublespeed("D:/audioAndvideo/NocturneNo2inEflat_44.1k_s16le.pcm");
+	//simplest_pcm16le_doublespeed("D:/audioAndvideo/NocturneNo2inEflat_44.1k_s16le.pcm");
+	char s[] = "D:\\audioAndvideo\\sintel_640_360.yuv";
+	char* url = s;
+	simplest_yuv420_split(url, 640, 360, 1);
+	
 	return 0;
 }

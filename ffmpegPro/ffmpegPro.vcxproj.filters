@@ -30,6 +30,9 @@
     <ClCompile Include="pcm_relation.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="yuvrelation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common_relation.h">
@@ -45,6 +48,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="pcm_relation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yuvrelation.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
