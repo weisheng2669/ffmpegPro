@@ -5,6 +5,8 @@
 #include "Decoder.h"
 #include "pcm_relation.h"
 #include "yuvrelation.h"
+#include "demuxer_realation.h"
+#include "decodeaac.h"
 using namespace std;
 
 /*
@@ -65,9 +67,13 @@ int main()
 	//simplest_pcm16le_split("D:/audioAndvideo/NocturneNo2inEflat_44.1k_s16le.pcm");
 	//simplest_pcm16le_halfvolumeleft("D:/audioAndvideo/NocturneNo2inEflat_44.1k_s16le.pcm");
 	//simplest_pcm16le_doublespeed("D:/audioAndvideo/NocturneNo2inEflat_44.1k_s16le.pcm");
-	char s[] = "D:\\audioAndvideo\\sintel_640_360.yuv";
+	/*char s[] = "D:\\audioAndvideo\\sintel_640_360.yuv";
 	char* url = s;
-	simplest_yuv420_split(url, 640, 360, 1);
+	simplest_yuv420_split(url, 640, 360, 1);*/
+	//demuxer("D:/audioAndvideo/test.mp4");
+	//decodeaac();
+	printf("%d", 'abcd');
+
 	
 	return 0;
 }

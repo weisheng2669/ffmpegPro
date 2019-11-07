@@ -35,3 +35,15 @@ int simplest_yuv420_split(char* url, int w, int h, int num) {
 
 	return 0;
 }
+
+
+int decodeyuv420(char* url) {
+	//1.注册组件->编码器 解码器等
+	av_register_all();
+	//2.初始化封装格式上下文->视频编码->处理为视频压缩格式
+	AVFormatContext* avformat_context = avformat_alloc_context();
+	//3.得到视频压缩数据的类型
+	return 0;
+
+
+}

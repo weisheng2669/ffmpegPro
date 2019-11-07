@@ -33,6 +33,12 @@
     <ClCompile Include="yuvrelation.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="demuxer_realation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="decodeaac.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common_relation.h">
@@ -51,6 +57,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="yuvrelation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="demuxer_realation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="decodeaac.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
