@@ -19,6 +19,10 @@ extern "C" {
 #include"libswscale/swscale.h"
 #include "libswresample/swresample.h"
 }
+#include <memory>
+#include <thread>
+#include <string>
+using namespace std;
 
 
 #define LOGE(...)  av_log(NULL,AV_LOG_ERROR,__VA_ARGS__)
