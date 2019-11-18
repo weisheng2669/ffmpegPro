@@ -7,6 +7,7 @@
 #include "yuvrelation.h"
 #include "demuxer_realation.h"
 #include "decodeaac.h"
+#include "videodecode_relation.h"
 using namespace std;
 
 /*
@@ -70,9 +71,9 @@ int main()
 	/*char s[] = "D:\\audioAndvideo\\sintel_640_360.yuv";
 	char* url = s;
 	simplest_yuv420_split(url, 640, 360, 1);*/
-	//demuxer("D:/audioAndvideo/test.mp4");
-	//decodeaac();
-	printf("%d", 'abcd');
+	demuxer("D:/audioAndvideo/test.mp4");
+	//decodeaac(); 
+	decodeh264("D:\\audioAndvideo\\test.mp4");
 
 	
 	return 0;
