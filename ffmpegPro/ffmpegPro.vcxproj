@@ -161,6 +161,7 @@
     <ClCompile Include="Decoder.cpp" />
     <ClCompile Include="demuxer_realation.cpp" />
     <ClCompile Include="ffmpegPro.cpp" />
+<<<<<<< Updated upstream
     <ClCompile Include="pcm_relation.cpp" />
     <ClCompile Include="rtmp_save_file.cpp" />
     <ClCompile Include="YUVDecoder.cpp" />
@@ -175,6 +176,13 @@
     <ClInclude Include="rtmp_save_file.h" />
     <ClInclude Include="YUVDecoder.h" />
     <ClInclude Include="yuvrelation.h" />
+=======
+    <ClCompile Include="transmuxer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common_relation.h" />
+    <ClInclude Include="transmuxer.h" />
+>>>>>>> Stashed changes
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
