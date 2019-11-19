@@ -177,10 +177,7 @@
     <ClInclude Include="yuvrelation.h" />
     <ClCompile Include="transmuxer.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="common_relation.h" />
-    <ClInclude Include="transmuxer.h" />
-  </ItemGroup>
+  
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
