@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 ﻿  demuxer_realation.cpp
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavutil\rational.h(1,1): warning C4819:  该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\demuxer_realation.cpp(38,9): warning C4477:  “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int64_t”
@@ -18,5 +19,8 @@ D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message :  参见“f
   ffmpegPro.cpp
 D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\demuxer_realation.cpp(154,4): warning C4102:  “end”: 未引用的标签
   正在生成代码...
+=======
+﻿  ffmpegPro.cpp
+>>>>>>> Stashed changes
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavutil\rational.h(1,1): warning C4819:  该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   ffmpegPro.vcxproj -> D:\visualstudioworkspace\FFMpegPro\FFMpegPro\x64\Debug\ffmpegPro.exe
