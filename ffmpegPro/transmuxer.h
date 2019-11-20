@@ -5,7 +5,7 @@ class transmuxer
 public: 
 	transmuxer();
 	~transmuxer();
-	int transport_file(char* src_file, char* dst_file);
+	int transport_file(const char* src_file,const char* dst_file);
 
 private:
 

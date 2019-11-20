@@ -1,19 +1,15 @@
 ﻿
 #include <string>
 #include <iostream>
+#include "transmuxer.h"
 using namespace std;
 
-<<<<<<< Updated upstream
-
-
-int main()
-{  
-
-=======
 
 int main()
 { 
-	demuxer("D:\\audioAndvideo\\muxer\\test.mp4");
->>>>>>> Stashed changes
+	//转封装
+	transmuxer t;
+	t.transport_file("D:\\audioAndvideo\\transmuxer\\live.mp4", 
+		"D:\\audioAndvideo\\transmuxer\\live.avi");
 	return 0;
 }
