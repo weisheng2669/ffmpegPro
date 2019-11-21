@@ -1,13 +1,19 @@
-#include "demuxer_realation.h"
+#include "demuxer_relation.h"
 
 
 static double r2d(AVRational r)
 {
 	return r.den == 0 ? 0 : (double)r.num / (double)r.den;
 }
+demuxer_relation::demuxer_relation() {
 
+}
 
-int demuxer(const char* input_fname)
+demuxer_relation::~demuxer_relation() {
+
+}
+
+int demuxer_relation::demuxer(const char* input_fname)
 {  
 	int audio_stream_index = -1, video_stream_index = -1,isaaccodec = -1;
 	const char* output_v_fname = "D:\\audioAndvideo\\muxer\\test_de.h264";
@@ -99,7 +105,6 @@ int demuxer(const char* input_fname)
 	AVCodec* audiodecode = avcodec_find_decoder(audioCodecCtx->codec_id);
 
 	AVFrame picture;
-	AVPacket pkt;
 
 	while (av_read_frame(fmt_ctx, &pkt) >= 0)
 	{

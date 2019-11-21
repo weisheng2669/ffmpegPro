@@ -158,12 +158,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ffmpegPro.cpp" />
+    <ClCompile Include="muxer.cpp" />
     <ClCompile Include="transmuxer.cpp" />
-    <ClCompile Include="demuxer_realation.cpp" />
+    <ClCompile Include="demuxer_relation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common_relation.h" />
-    <ClInclude Include="demuxer_realation.h" />
+    <ClInclude Include="demuxer_relation.h" />
+    <ClInclude Include="muxer.h" />
     <ClInclude Include="transmuxer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

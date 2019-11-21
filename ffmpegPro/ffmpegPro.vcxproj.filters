@@ -21,7 +21,10 @@
     <ClCompile Include="transmuxer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="demuxer_realation.cpp">
+    <ClCompile Include="demuxer_relation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="muxer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,7 +35,10 @@
     <ClInclude Include="transmuxer.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="demuxer_realation.h">
+    <ClInclude Include="demuxer_relation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="muxer.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
