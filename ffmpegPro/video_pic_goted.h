@@ -2,6 +2,7 @@
 #include "common_relation.h"
 #include <string>
 #include <thread>
+#include <memory>
 #include <iostream>
 
 using namespace std;
