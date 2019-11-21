@@ -157,27 +157,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="decodeaac.cpp" />
-    <ClCompile Include="Decoder.cpp" />
-    <ClCompile Include="demuxer_realation.cpp" />
     <ClCompile Include="ffmpegPro.cpp" />
-    <ClCompile Include="pcm_relation.cpp" />
-    <ClCompile Include="rtmp_save_file.cpp" />
-    <ClCompile Include="YUVDecoder.cpp" />
-    <ClCompile Include="yuvrelation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common_relation.h" />
-    <ClInclude Include="decodeaac.h" />
-    <ClInclude Include="Decoder.h" />
-    <ClInclude Include="demuxer_realation.h" />
-    <ClInclude Include="pcm_relation.h" />
-    <ClInclude Include="rtmp_save_file.h" />
-    <ClInclude Include="YUVDecoder.h" />
-    <ClInclude Include="yuvrelation.h" />
-    <ClCompile Include="transmuxer.cpp" />
   </ItemGroup>
-  
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
