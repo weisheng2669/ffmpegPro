@@ -158,9 +158,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ffmpegPro.cpp" />
+    <ClCompile Include="pcm_relation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common_relation.h" />
+    <ClInclude Include="pcm_relation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
