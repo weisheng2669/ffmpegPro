@@ -21,12 +21,18 @@
     <ClCompile Include="transmuxer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="demuxer_realation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common_relation.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="transmuxer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="demuxer_realation.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
