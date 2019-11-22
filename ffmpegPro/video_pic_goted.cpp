@@ -127,6 +127,9 @@ shared_ptr<AVPacket> read_frame_fromsource() {
 	lastReadPacketTime = av_gettime();
 	ret = av_read_frame(ifmt_ctx, packet.get());
 	if (ret >=  0) {
+		if (packet->stream_index == AVMEDIA_TYPE_VIDEO) {
+			printf("is video\n");
+		}
 		return packet;
 	}
 	else {
@@ -144,7 +147,7 @@ bool decode(AVStream* inputStream, AVPacket* packet, AVFrame* frame) {
 }
 shared_ptr<AVPacket> encode(AVCodecContext* encodeContext, AVFrame* frame) {
 	int gotoutput = 0;
-	std::shared_ptr<AVPacket> pkt(static_cast<AVPacket*> (av_malloc(sizeof(AVPacket))),
+	shared_ptr<AVPacket> pkt(static_cast<AVPacket*> (av_malloc(sizeof(AVPacket))),
 		[&](AVPacket* p) {av_packet_free(&p); av_freep(&p); });
 	av_init_packet(pkt.get());
 	pkt->data = NULL;
@@ -204,7 +207,7 @@ int video_pic_goted::got_pic_from_video(const char* src_url,const char* dst_url)
 		init_encode_context_codec(ifmt_ctx->streams[video_index], &encodeContext);
 		while (true) {
 			auto pkt = read_frame_fromsource();
-			if (pkt && pkt->stream_index == 0) {
+			if (pkt && pkt->stream_index == video_index) {
 				if (decode(ifmt_ctx->streams[video_index], pkt.get(), video_frame)) {
 					auto packetEncode = encode(encodeContext, video_frame);
 					if (packetEncode) {
@@ -221,7 +224,8 @@ int video_pic_goted::got_pic_from_video(const char* src_url,const char* dst_url)
 		printf("Got pic !\n");
 		av_frame_free(&video_frame);
 		avcodec_close(encodeContext);
-
+		close_input();
+		close_output();
 	}
 	return 0;
 
