@@ -27,5 +27,6 @@ using namespace std;
 
 #define LOGE(...)  av_log(NULL,AV_LOG_ERROR,__VA_ARGS__)
 #define LOGI(...)  av_log(NULL,AV_LOG_INFO,__VA_ARGS__)
+#define LOGW(...)  av_log(NULL,AV_LOG_WARNING,__VA_ARGS__)
 
 #endif  VIDEOOP// !VIDEOOP

@@ -157,11 +157,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="encodepcmtoaac.cpp" />
+    <ClCompile Include="encodeyuvtoh264.cpp" />
     <ClCompile Include="encodeyuvtojpg.cpp" />
     <ClCompile Include="ffmpegPro.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common_relation.h" />
+    <ClInclude Include="encodepcmtoaac.h" />
+    <ClInclude Include="encodeyuvtoh264.h" />
     <ClInclude Include="encodeyuvtojpg.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

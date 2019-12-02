@@ -21,12 +21,24 @@
     <ClCompile Include="encodeyuvtojpg.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="encodepcmtoaac.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encodeyuvtoh264.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common_relation.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="encodeyuvtojpg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encodepcmtoaac.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encodeyuvtoh264.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

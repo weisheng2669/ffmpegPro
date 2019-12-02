@@ -1,33 +1,24 @@
-﻿  encodeyuvtojpg.cpp
+﻿  encodeyuvtoh264.cpp
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavutil\rational.h(1,1): warning C4819:  该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\ffmpegPro\encodeyuvtojpg.cpp(22,30): warning C4129:  “ ”: 不可识别的字符转义序列
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\ffmpegPro\encodeyuvtojpg.cpp(29,22): warning C4018:  “<”: 有符号/无符号不匹配
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\ffmpegPro\encodeyuvtojpg.cpp(57,20): warning C4018:  “<”: 有符号/无符号不匹配
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\ffmpegPro\encodeyuvtojpg.cpp(61,84): warning C4996:  'AVStream::codec': 被声明为已否决
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(16,5): warning C4996:  'AVStream::codec': 被声明为已否决
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\ffmpegPro\encodeyuvtojpg.cpp(63,7): warning C4996:  'AVStream::codec': 被声明为已否决
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(23,73): warning C4996:  'AVStream::codec': 被声明为已否决
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\ffmpegPro\encodeyuvtojpg.cpp(74,21): warning C4018:  “<”: 有符号/无符号不匹配
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\ffmpegPro\encodeyuvtojpg.cpp(75,45): warning C4996:  'AVStream::codec': 被声明为已否决
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(95,42): warning C4996:  'AVStream::codec': 被声明为已否决
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\ffmpegPro\encodeyuvtojpg.cpp(63,1): warning C4996:  'avcodec_copy_context': 被声明为已否决
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(4412): message :  参见“avcodec_copy_context”的声明
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\ffmpegPro\encodeyuvtojpg.cpp(96,5): warning C4996:  'AVStream::codec': 被声明为已否决
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(110,33): warning C4305:  “=”: 从“double”到“float”截断
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(170,72): warning C4996:  'AVStream::codec': 被声明为已否决
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\ffmpegPro\encodeyuvtojpg.cpp(108,52): warning C4996:  'AVStream::codec': 被声明为已否决
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(185,41): warning C4996:  'AVStream::codec': 被声明为已否决
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\ffmpegPro\encodeyuvtojpg.cpp(109,52): warning C4996:  'AVStream::codec': 被声明为已否决
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\ffmpegPro\encodeyuvtojpg.cpp(111,44): warning C4996:  'AVStream::codec': 被声明为已否决
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\ffmpegPro\encodeyuvtojpg.cpp(112,45): warning C4996:  'AVStream::codec': 被声明为已否决
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\ffmpegPro\encodeyuvtojpg.cpp(134,50): warning C4996:  'AVStream::codec': 被声明为已否决
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\ffmpegPro\encodeyuvtojpg.cpp(147,1): warning C4996:  'avcodec_encode_video2': 被声明为已否决
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(66,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message :  参见“fopen”的声明
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(132,1): warning C4996:  'avpicture_get_size': 被声明为已否决
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(5653): message :  参见“avpicture_get_size”的声明
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(134,1): warning C4996:  'avpicture_fill': 被声明为已否决
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(5638): message :  参见“avpicture_fill”的声明
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(156,1): warning C4996:  'avcodec_encode_video2': 被声明为已否决
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(5508): message :  参见“avcodec_encode_video2”的声明
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\ffmpegPro\encodeyuvtojpg.cpp(170,21): warning C4018:  “<”: 有符号/无符号不匹配
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\ffmpegPro\encodeyuvtojpg.cpp(171,62): warning C4996:  'AVStream::codec': 被声明为已否决
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\ffmpegPro\encodeyuvtojpg.cpp(43): warning C4715:  “openInput”: 不是所有的控件路径都返回值
-  ffmpegPro.vcxproj -> D:\visualstudioworkspace\ffmpegPro\ffmpegPro\x64\Debug\ffmpegPro.exe
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(167,1): warning C4996:  'av_free_packet': 被声明为已否决
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(4650): message :  参见“av_free_packet”的声明
+  ffmpegPro.vcxproj -> D:\visualstudioworkspace\FFMpegPro\FFMpegPro\x64\Debug\ffmpegPro.exe
