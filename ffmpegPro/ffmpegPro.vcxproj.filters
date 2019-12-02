@@ -18,13 +18,13 @@
     <ClCompile Include="ffmpegPro.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="encodeyuvtojpg.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="encodepcmtoaac.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="encodeyuvtoh264.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encodeyuvtojpg.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -51,9 +51,11 @@ int encodeyuvtoh264::encodeframetoh264(const char* src_url,const char* dst_url) 
 	AVCodec* out_codec = nullptr;
 
 	uint8_t* picture_buf = nullptr;
+	uint8_t* picture_buf_num = nullptr;
 	AVFrame* picture = nullptr;
 	int size;
 	AVPacket pkt;
+	int frame_num = 0 ;
 
 	int y_size;
 	int got_picture;
@@ -64,6 +66,7 @@ int encodeyuvtoh264::encodeframetoh264(const char* src_url,const char* dst_url) 
 
 	//打开文件
 	FILE* in_file = fopen(src_url, "rb");
+	FILE* in_file_num = fopen(src_url, "rb");
 	if (!in_file) {
 		LOGE("file not opened \n");
 		return -1;
@@ -124,6 +127,8 @@ int encodeyuvtoh264::encodeframetoh264(const char* src_url,const char* dst_url) 
 		LOGE("codec open \n");
 		return -1;
 	}
+	
+	
 	av_dump_format(ofmt_ctx_h264, 0, dst_url, 1);
 	picture = av_frame_alloc();
 	picture->width = out_codec_ctx->width;
@@ -131,12 +136,22 @@ int encodeyuvtoh264::encodeframetoh264(const char* src_url,const char* dst_url) 
 	picture->format = out_codec_ctx->pix_fmt;
 	size = avpicture_get_size(out_codec_ctx->pix_fmt, out_codec_ctx->width, out_codec_ctx->height);
 	picture_buf = (uint8_t*)av_malloc(size);
+	//分配Frame的格式
 	avpicture_fill((AVPicture*)picture, picture_buf, out_codec_ctx->pix_fmt, 
 		out_codec_ctx->width, out_codec_ctx->height);
 	avformat_write_header(ofmt_ctx_h264, NULL);
 	y_size = out_codec_ctx->width * out_codec_ctx->height;
 	av_new_packet(&pkt, size );
-	for (int i = 0; i < 100; i++) {
+
+	picture_buf_num = (uint8_t*)av_malloc(size);
+	while (fread(picture_buf_num, 1, y_size * 3 / 2, in_file_num) > 0) {
+		frame_num++;
+	}
+	fclose(in_file_num);
+	printf("num = %d", frame_num);
+
+
+	for (int i = 0; i < frame_num; i++) {
 		//Read raw YUV data
 		if (fread(picture_buf, 1, y_size * 3 / 2, in_file) <= 0) {
 			printf("Failed to read raw data! \n");
@@ -166,9 +181,7 @@ int encodeyuvtoh264::encodeframetoh264(const char* src_url,const char* dst_url) 
 			ret_h264 = av_write_frame(ofmt_ctx_h264, &pkt);
 			av_free_packet(&pkt);
 		}
-		else {
-			printf("capabilities =%d  %8d\n", i,ofmt_ctx_h264->streams[0]->codec->codec->capabilities);
-		}
+		
 	}
 	//Flush Encoder
 	ret_h264 = flush_encoder(ofmt_ctx_h264, 0);

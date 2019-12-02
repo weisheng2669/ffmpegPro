@@ -4,21 +4,23 @@ D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(16,5)
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
 D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(23,73): warning C4996:  'AVStream::codec': 被声明为已否决
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(95,42): warning C4996:  'AVStream::codec': 被声明为已否决
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(98,42): warning C4996:  'AVStream::codec': 被声明为已否决
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(110,33): warning C4305:  “=”: 从“double”到“float”截断
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(170,72): warning C4996:  'AVStream::codec': 被声明为已否决
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(113,33): warning C4305:  “=”: 从“double”到“float”截断
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(184,72): warning C4996:  'AVStream::codec': 被声明为已否决
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(185,41): warning C4996:  'AVStream::codec': 被声明为已否决
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(199,41): warning C4996:  'AVStream::codec': 被声明为已否决
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(66,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(68,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message :  参见“fopen”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(132,1): warning C4996:  'avpicture_get_size': 被声明为已否决
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(69,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message :  参见“fopen”的声明
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(137,1): warning C4996:  'avpicture_get_size': 被声明为已否决
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(5653): message :  参见“avpicture_get_size”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(134,1): warning C4996:  'avpicture_fill': 被声明为已否决
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(140,1): warning C4996:  'avpicture_fill': 被声明为已否决
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(5638): message :  参见“avpicture_fill”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(156,1): warning C4996:  'avcodec_encode_video2': 被声明为已否决
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(170,1): warning C4996:  'avcodec_encode_video2': 被声明为已否决
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(5508): message :  参见“avcodec_encode_video2”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(167,1): warning C4996:  'av_free_packet': 被声明为已否决
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(181,1): warning C4996:  'av_free_packet': 被声明为已否决
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(4650): message :  参见“av_free_packet”的声明
   ffmpegPro.vcxproj -> D:\visualstudioworkspace\FFMpegPro\FFMpegPro\x64\Debug\ffmpegPro.exe
