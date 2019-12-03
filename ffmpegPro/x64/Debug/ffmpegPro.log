@@ -1,7 +1,22 @@
 ﻿  encodeyuvtojpg.cpp
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavutil\rational.h(1,1): warning C4819:  该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtojpg.cpp(26,37): warning C4996:  'AVStream::codec': 被声明为已否决
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtojpg.cpp(26,40): warning C4996:  'AVStream::codec': 被声明为已否决
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtojpg.cpp(53,1): error C2059:  语法错误:“}”
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtojpg.cpp(93,1): warning C4996:  'avpicture_get_size': 被声明为已否决
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtojpg.cpp(53,1): warning C4996:  'avpicture_fill': 被声明为已否决
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(5638): message :  参见“avpicture_fill”的声明
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtojpg.cpp(60,5): warning C4996:  'AVStream::codec': 被声明为已否决
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtojpg.cpp(67,76): warning C4996:  'AVStream::codec': 被声明为已否决
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtojpg.cpp(138,5): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtojpg.cpp(96,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message :  参见“fopen”的声明
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtojpg.cpp(125,1): warning C4996:  'avpicture_get_size': 被声明为已否决
 D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(5653): message :  参见“avpicture_get_size”的声明
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtojpg.cpp(147,1): warning C4996:  'avcodec_encode_video2': 被声明为已否决
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(5508): message :  参见“avcodec_encode_video2”的声明
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtojpg.cpp(157,1): warning C4996:  'av_free_packet': 被声明为已否决
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(4650): message :  参见“av_free_packet”的声明
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtojpg.cpp(167): warning C4715:  “encodeyuvtojpg::encode”: 不是所有的控件路径都返回值
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtojpg.cpp(128): warning C4700:  使用了未初始化的局部变量“frame”
+  ffmpegPro.vcxproj -> D:\visualstudioworkspace\FFMpegPro\FFMpegPro\x64\Debug\ffmpegPro.exe
