@@ -15,7 +15,7 @@ void init_op() {
 }
 
 int initOutput(AVFormatContext** ofmt_ctx, const char* dst_url) {
-	return avformat_alloc_output_context2(ofmt_ctx, NULL, NULL, dst_url);
+	return avformat_alloc_output_context2(ofmt_ctx, NULL, "singlejpeg", dst_url);
 }
 
 int openOutput(AVFormatContext** ofmt_ctx, const char* dst_url) {
@@ -23,16 +23,16 @@ int openOutput(AVFormatContext** ofmt_ctx, const char* dst_url) {
 }
 
 void initcodecContext(AVCodecContext** out_codec_ctx,AVStream* video_stream) {
-	(*out_codec_ctx) = video_stream->codec;
-	(*out_codec_ctx)->codec_id = AV_CODEC_ID_MJPEG;
-	(*out_codec_ctx)->codec_type = AVMEDIA_TYPE_VIDEO;
-	(*out_codec_ctx)->pix_fmt = AV_PIX_FMT_YUV420P;
+	AVCodec* picCodec;
+	picCodec = avcodec_find_encoder(AV_CODEC_ID_MJPEG);
+	//2.初始化(*encodeContext)环境
+	(*out_codec_ctx) = avcodec_alloc_context3(picCodec);
+	(*out_codec_ctx)->codec_id = picCodec->id;
 	(*out_codec_ctx)->time_base.num = 1;
 	(*out_codec_ctx)->time_base.den = 30;
-	(*out_codec_ctx)->width = 1920;
-	(*out_codec_ctx)->height = 1080;
-	(*out_codec_ctx)->bit_rate = 400000;
-	(*out_codec_ctx)->gop_size = 30;
+	(*out_codec_ctx)->pix_fmt = *picCodec->pix_fmts;
+	(*out_codec_ctx)->width = 640;
+	(*out_codec_ctx)->height = 360;
 }
 
 int findAndOpenEncode(AVCodecContext* out_codec_ctx,AVCodec **codec) {
@@ -42,16 +42,9 @@ int findAndOpenEncode(AVCodecContext* out_codec_ctx,AVCodec **codec) {
 		return -1;
 	}
 	return avcodec_open2(out_codec_ctx, (*codec), NULL);
-
 }
-void initFrame(AVCodecContext* out_codec_ctx,AVFrame* frame, uint8_t* picture_buf, int size) {
-	frame = av_frame_alloc();
-	frame->width = out_codec_ctx->width;
-	frame->height = out_codec_ctx->height;
-	frame->format = out_codec_ctx->pix_fmt;
-	picture_buf = (uint8_t*)av_malloc(size);
-	avpicture_fill((AVPicture*)frame, picture_buf, out_codec_ctx->pix_fmt,
-		out_codec_ctx->width, out_codec_ctx->height);
+void initFrame(AVCodecContext* out_codec_ctx,AVFrame** frame, uint8_t** picture_buf, int size) {
+	
 }
 
 int flush_encoder(AVFormatContext* fmt_ctx, unsigned int stream_index) {
@@ -89,7 +82,7 @@ int encodeyuvtojpg::encode(const char* src_url, const char* dst_url) {
 	AVCodecContext* out_codec_ctx = nullptr;
 	AVStream* video_stream = nullptr;
 	AVCodec* codec = nullptr;
-	AVFrame* frame;
+	AVFrame* frame = nullptr;
 	int size = 0,yuv_size = 0;
 	uint8_t* picture_buf = nullptr;
 	AVPacket pkt;
@@ -125,7 +118,13 @@ int encodeyuvtojpg::encode(const char* src_url, const char* dst_url) {
 	size = avpicture_get_size(out_codec_ctx->pix_fmt,
 		out_codec_ctx->width, out_codec_ctx->height);
 	//7.帧初始化
-	initFrame(out_codec_ctx,frame,picture_buf,size);
+	frame = av_frame_alloc();
+	frame->width = out_codec_ctx->width;
+	frame->height = out_codec_ctx->height;
+	frame->format = out_codec_ctx->pix_fmt;
+	picture_buf = (uint8_t*)av_malloc(size);
+	avpicture_fill((AVPicture*)frame, picture_buf, out_codec_ctx->pix_fmt,
+		out_codec_ctx->width, out_codec_ctx->height);
 	//8.写入Frame
 	// 8.1 写入头部
 	if ((ret_yuv_jpg = avformat_write_header(ofmt_ctx, NULL)) < 0) {
@@ -150,9 +149,10 @@ int encodeyuvtojpg::encode(const char* src_url, const char* dst_url) {
 	if (got_frame == 1) {
 		printf("Succeed to encode  size:%5d\n",pkt.size);
 		pkt.stream_index = video_stream->index;
-		ret_yuv_jpg = av_write_frame(ofmt_ctx, &pkt);
-		if (ret_yuv_jpg == 0) {
+		ret_yuv_jpg = av_interleaved_write_frame(ofmt_ctx, &pkt);
+		if (ret_yuv_jpg < 0) {
 			LOGE("write failed\n");
+			return -1;
 		}
 		av_free_packet(&pkt);
 	}
@@ -161,6 +161,16 @@ int encodeyuvtojpg::encode(const char* src_url, const char* dst_url) {
 			LOGE("Flushing encoder failed\n");
 			return -1;
 		}
+	}
+	av_frame_free(&frame);
+	avcodec_close(out_codec_ctx);
+	if (ofmt_ctx != nullptr) {
+		ret_yuv_jpg = av_write_trailer(ofmt_ctx);
+		for (int i = 0; i < ofmt_ctx->nb_streams; i++) {
+			AVCodecContext* codec_ctx = ofmt_ctx->streams[i]->codec;
+			avcodec_close(codec_ctx);
+		}
+		avformat_close_input(&ofmt_ctx);
 	}
 
 
