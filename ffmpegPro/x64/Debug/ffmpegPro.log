@@ -1,26 +1,19 @@
-﻿  encodeyuvtoh264.cpp
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavutil\rational.h(1,1): warning C4819:  该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(16,5): warning C4996:  'AVStream::codec': 被声明为已否决
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(23,73): warning C4996:  'AVStream::codec': 被声明为已否决
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(98,42): warning C4996:  'AVStream::codec': 被声明为已否决
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(113,33): warning C4305:  “=”: 从“double”到“float”截断
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(184,72): warning C4996:  'AVStream::codec': 被声明为已否决
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(199,41): warning C4996:  'AVStream::codec': 被声明为已否决
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message :  参见“AVStream::codec”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(68,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message :  参见“fopen”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(69,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message :  参见“fopen”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(137,1): warning C4996:  'avpicture_get_size': 被声明为已否决
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(5653): message :  参见“avpicture_get_size”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(140,1): warning C4996:  'avpicture_fill': 被声明为已否决
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(5638): message :  参见“avpicture_fill”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(170,1): warning C4996:  'avcodec_encode_video2': 被声明为已否决
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(5508): message :  参见“avcodec_encode_video2”的声明
-D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodeyuvtoh264.cpp(181,1): warning C4996:  'av_free_packet': 被声明为已否决
-D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(4650): message :  参见“av_free_packet”的声明
+﻿  encodepcmtoaac.cpp
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavutil\rational.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\common_relation.h(32,1): warning C4005: “_CRT_SECURE_NO_WARNINGS”: 宏重定义
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodepcmtoaac.cpp : message : 参见“_CRT_SECURE_NO_WARNINGS”的前一个定义
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodepcmtoaac.cpp(16,5): warning C4996: 'AVStream::codec': 被声明为已否决
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message : 参见“AVStream::codec”的声明
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodepcmtoaac.cpp(23,68): warning C4996: 'AVStream::codec': 被声明为已否决
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message : 参见“AVStream::codec”的声明
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodepcmtoaac.cpp(76,53): warning C4996: 'AVStream::codec': 被声明为已否决
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message : 参见“AVStream::codec”的声明
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodepcmtoaac.cpp(143,60): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodepcmtoaac.cpp(175,43): warning C4996: 'AVStream::codec': 被声明为已否决
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavformat\avformat.h(893): message : 参见“AVStream::codec”的声明
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodepcmtoaac.cpp(157,1): warning C4996: 'avcodec_encode_audio2': 被声明为已否决
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(5469): message : 参见“avcodec_encode_audio2”的声明
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodepcmtoaac.cpp(165,1): warning C4996: 'av_free_packet': 被声明为已否决
+D:\visualstudioworkspace\ffmpegPro\ffmpegPro\include\libavcodec\avcodec.h(4650): message : 参见“av_free_packet”的声明
+D:\visualstudioworkspace\FFMpegPro\FFMpegPro\ffmpegPro\encodepcmtoaac.cpp(182): warning C4715: “encodepcmtoaac::encode_audio”: 不是所有的控件路径都返回值
   ffmpegPro.vcxproj -> D:\visualstudioworkspace\FFMpegPro\FFMpegPro\x64\Debug\ffmpegPro.exe

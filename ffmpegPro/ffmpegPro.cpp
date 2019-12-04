@@ -19,15 +19,18 @@ int main()
 	/*
 	pcm->aac
 	*/
-	/*
-	encodepcmtoaac e;
-	FILE* file = fopen("D:\\audioAndvideo\\encode\\test.mp3","wb+");
-	e.encode_audio("D:\\audioAndvideo\\encode\\test.pcm",file);
-	*/
 	
+	encodepcmtoaac e;
+	e.encode_audio("D:\\audioAndvideo\\encode\\test.pcm",
+		"D:\\audioAndvideo\\encode\\test.aac");
+	
+	
+	/*
+	 yuv->h264
+
 	encodeyuvtoh264 e;
 	e.encodeframetoh264("d:\\audioandvideo\\encode\\sintel_640_360.yuv",
 		"d:\\audioandvideo\\encode\\sintel_640_360.h264");
 		
-	printf("%d", NULL);
+	printf("%d", NULL);*/
 }

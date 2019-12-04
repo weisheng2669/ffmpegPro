@@ -6,6 +6,6 @@ class encodepcmtoaac
 public:
 	encodepcmtoaac();
 	~encodepcmtoaac();
-	int encode_audio(const char* url, FILE* output_file);
+	int encode_audio(const char* src_url,const char* dst_url);
 };
 
