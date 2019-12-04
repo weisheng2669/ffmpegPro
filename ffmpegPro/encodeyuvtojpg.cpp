@@ -43,9 +43,7 @@ int findAndOpenEncode(AVCodecContext* out_codec_ctx,AVCodec **codec) {
 	}
 	return avcodec_open2(out_codec_ctx, (*codec), NULL);
 }
-void initFrame(AVCodecContext* out_codec_ctx,AVFrame** frame, uint8_t** picture_buf, int size) {
-	
-}
+
 
 int flush_encoder(AVFormatContext* fmt_ctx, unsigned int stream_index) {
 	int got_frame;
@@ -90,33 +88,40 @@ int encodeyuvtojpg::encode(const char* src_url, const char* dst_url) {
 
 	//1.初始化
 	init_op();
+
 	//2.分配AVFormatContext
 	if ((ret_yuv_jpg = initOutput(&ofmt_ctx, dst_url)) < 0) {
 		LOGE("output init failed \n");
 		return ret_yuv_jpg;
 	}
 	ofmt = ofmt_ctx->oformat;
+
 	//3.打开输出文件
 	if ((ret_yuv_jpg = openOutput(&ofmt_ctx, dst_url)) < 0) {
 		LOGE("output open failed \n");
 		return ret_yuv_jpg;
 	}
+
     //4.添加新流
 	if ((video_stream = avformat_new_stream(ofmt_ctx, 0))== NULL) {
 		LOGE("video stream new failed \n");
 		return -1;
 	}
+
 	//5.初始化codecContext
 	initcodecContext(&out_codec_ctx,video_stream);
+
 	//6.查找并打开编码器
 	if ((ret_yuv_jpg = findAndOpenEncode(out_codec_ctx, &codec)) < 0) {
 		LOGE("find open encode failed \n");
 		return -1;
 	}
+
 	//输出编码器环境
 	av_dump_format(ofmt_ctx, 0, dst_url, 1);
 	size = avpicture_get_size(out_codec_ctx->pix_fmt,
 		out_codec_ctx->width, out_codec_ctx->height);
+
 	//7.帧初始化
 	frame = av_frame_alloc();
 	frame->width = out_codec_ctx->width;
@@ -125,7 +130,9 @@ int encodeyuvtojpg::encode(const char* src_url, const char* dst_url) {
 	picture_buf = (uint8_t*)av_malloc(size);
 	avpicture_fill((AVPicture*)frame, picture_buf, out_codec_ctx->pix_fmt,
 		out_codec_ctx->width, out_codec_ctx->height);
+
 	//8.写入Frame
+
 	// 8.1 写入头部
 	if ((ret_yuv_jpg = avformat_write_header(ofmt_ctx, NULL)) < 0) {
 		LOGE("write head failed \n");
@@ -162,16 +169,18 @@ int encodeyuvtojpg::encode(const char* src_url, const char* dst_url) {
 			return -1;
 		}
 	}
+	//8.3 写入尾部
+	ret_yuv_jpg = av_write_trailer(ofmt_ctx);
 	av_frame_free(&frame);
+
+	//9.关闭资源
 	avcodec_close(out_codec_ctx);
 	if (ofmt_ctx != nullptr) {
-		ret_yuv_jpg = av_write_trailer(ofmt_ctx);
 		for (int i = 0; i < ofmt_ctx->nb_streams; i++) {
 			AVCodecContext* codec_ctx = ofmt_ctx->streams[i]->codec;
 			avcodec_close(codec_ctx);
 		}
 		avformat_close_input(&ofmt_ctx);
 	}
-
 
 }
